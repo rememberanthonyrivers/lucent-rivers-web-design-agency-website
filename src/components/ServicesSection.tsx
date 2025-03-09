@@ -59,39 +59,17 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="relative group p-6 rounded-xl hover-lift"
+              className="relative group p-6 rounded-xl hover-lift text-center"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-lucent-400/40 to-lucent-600/40 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative h-full glass p-8 rounded-xl flex flex-col">
+              <div className="relative h-full glass p-8 rounded-xl flex flex-col items-center">
                 <div className="mb-5">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.accent} flex items-center justify-center shadow-lg`}>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground flex-grow">{service.description}</p>
-                <div className="mt-6">
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center text-lucent-500 hover:text-lucent-600 transition-colors group"
-                  >
-                    Learn more 
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-2 transform transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </a>
-                </div>
+                <p className="text-muted-foreground flex-grow text-center">{service.description}</p>
               </div>
             </div>
           ))}

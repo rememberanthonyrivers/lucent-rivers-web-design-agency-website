@@ -1,28 +1,18 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
     <footer className="relative bg-gradient-to-b from-secondary/30 to-secondary/50 pt-16 pb-8">
       <div className="container mx-auto max-w-6xl px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="lg:col-span-1">
             <Logo />
             <p className="mt-4 text-muted-foreground max-w-md">
               Lucent Rivers is a premium web development agency specializing in creating digital experiences that transform brands and drive business growth.
             </p>
-            <div className="flex space-x-4 mt-6">
-              {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
-                <a
-                  key={social}
-                  href={`#${social}`}
-                  className="w-8 h-8 rounded-full bg-lucent-50 flex items-center justify-center hover:bg-lucent-100 transition-colors"
-                >
-                  <span className="capitalize text-xs text-lucent-600">{social[0].toUpperCase()}</span>
-                </a>
-              ))}
-            </div>
           </div>
           
           <div>
@@ -30,9 +20,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {['Website Development', 'Web Applications', 'UI/UX Design', 'Backend Development', 'Mobile Development'].map((service) => (
                 <li key={service}>
-                  <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -41,11 +31,17 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-base font-bold mb-5">Company</h4>
             <ul className="space-y-3">
-              {['About Us', 'Our Work', 'Testimonials', 'Careers', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {item}
-                  </a>
+              {[
+                {name: 'About Us', path: '/about'},
+                {name: 'Our Work', path: '/portfolio'},
+                {name: 'Testimonials', path: '/#testimonials'},
+                {name: 'Pricing', path: '/pricing'},
+                {name: 'Contact', path: '/contact'}
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -55,7 +51,7 @@ const Footer: React.FC = () => {
             <h4 className="text-base font-bold mb-5">Contact Us</h4>
             <ul className="space-y-3">
               <li className="text-sm text-muted-foreground">
-                San Francisco, CA
+                New York, NY
               </li>
               <li>
                 <a href="mailto:hello@lucentrivers.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -77,15 +73,15 @@ const Footer: React.FC = () => {
               &copy; {new Date().getFullYear()} Lucent Rivers. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
-              </a>
-              <a href="#privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#cookies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Cookies
-              </a>
+              </Link>
             </div>
           </div>
         </div>

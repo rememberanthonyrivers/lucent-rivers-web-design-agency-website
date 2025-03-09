@@ -1,5 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -58,12 +59,12 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <button className="px-5 py-3 rounded-md bg-lucent-500 text-white font-medium hover:bg-lucent-600 transition-colors">
+              <Link to="/contact" className="px-5 py-3 rounded-md bg-lucent-500 text-white font-medium hover:bg-lucent-600 transition-colors">
                 Start Your Project
-              </button>
-              <button className="px-5 py-3 rounded-md border border-lucent-200 hover:border-lucent-400 transition-colors">
+              </Link>
+              <Link to="/portfolio" className="px-5 py-3 rounded-md border border-lucent-200 hover:border-lucent-400 transition-colors">
                 Our Portfolio
-              </button>
+              </Link>
             </div>
             
             <div className="mt-12 flex items-center space-x-4">

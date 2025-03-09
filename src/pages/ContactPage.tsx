@@ -20,12 +20,12 @@ const ContactPage = () => {
         </div>
       </section>
       
-      {/* Google Maps Integration */}
+      {/* Google Maps Integration - Updated to New York, NY */}
       <section className="relative py-8">
         <div className="container mx-auto max-w-6xl px-4 md:px-8">
           <div className="glass rounded-2xl overflow-hidden mb-16">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555687707!2d-122.50764097845816!3d37.75781499656795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1654543345817!5m2!1sen!2s" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304614!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1654543345817!5m2!1sen!2s" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 

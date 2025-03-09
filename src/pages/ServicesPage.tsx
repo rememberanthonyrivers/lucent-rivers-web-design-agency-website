@@ -2,7 +2,7 @@
 import React from 'react';
 import PageLayout from '@/components/PageLayout';
 import ServicesSection from '@/components/ServicesSection';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const additionalServices = [
   {
@@ -74,12 +74,12 @@ const ServicesPage = () => {
             {additionalServices.map((service, index) => (
               <div 
                 key={index} 
-                className="glass p-8 rounded-xl hover-lift"
+                className="glass p-8 rounded-xl hover-lift text-center"
               >
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3 mb-6 text-left">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-lucent-500 mr-2 shrink-0 mt-0.5" />
@@ -87,14 +87,6 @@ const ServicesPage = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center text-lucent-500 hover:text-lucent-600 transition-colors group"
-                >
-                  Learn more 
-                  <ArrowRight className="h-4 w-4 ml-2 transform transition-transform group-hover:translate-x-1" />
-                </a>
               </div>
             ))}
           </div>

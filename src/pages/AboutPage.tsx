@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { CheckCircle, Award, Target, Heart } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle, Award, Target, Heart, ArrowLeft, ArrowRight } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 
 const teamMembers = [
@@ -43,6 +43,16 @@ const teamMembers = [
 ];
 
 const AboutPage = () => {
+  const [currentTeamMember, setCurrentTeamMember] = useState(0);
+  
+  const nextTeamMember = () => {
+    setCurrentTeamMember((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
+  };
+  
+  const prevTeamMember = () => {
+    setCurrentTeamMember((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
+  };
+  
   return (
     <PageLayout>
       {/* Hero Section */}
@@ -130,7 +140,7 @@ const AboutPage = () => {
         </div>
       </section>
       
-      {/* Team Section */}
+      {/* Team Section with Carousel */}
       <section className="relative py-16">
         <div className="container mx-auto max-w-6xl px-4 md:px-8">
           <div className="text-center mb-16">
@@ -143,21 +153,55 @@ const AboutPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="glass p-6 rounded-xl hover-lift">
-                <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lucent-400 to-lucent-600 flex items-center justify-center mr-4 shadow-lg">
-                    <span className="text-white text-xl font-bold">{member.avatar}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="text-sm text-lucent-500">{member.role}</p>
-                  </div>
+          <div className="max-w-lg mx-auto relative">
+            {/* Carousel Navigation */}
+            <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-10">
+              <button 
+                onClick={prevTeamMember}
+                className="w-10 h-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:bg-lucent-50 transition-colors"
+                aria-label="Previous team member"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+              <button 
+                onClick={nextTeamMember}
+                className="w-10 h-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:bg-lucent-50 transition-colors"
+                aria-label="Next team member"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+            
+            {/* Team Member Card */}
+            <div className="glass p-6 rounded-xl hover-lift min-h-[220px]">
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lucent-400 to-lucent-600 flex items-center justify-center mr-4 shadow-lg">
+                  <span className="text-white text-xl font-bold">{teamMembers[currentTeamMember].avatar}</span>
                 </div>
-                <p className="text-muted-foreground">{member.bio}</p>
+                <div>
+                  <h3 className="text-xl font-bold">{teamMembers[currentTeamMember].name}</h3>
+                  <p className="text-sm text-lucent-500">{teamMembers[currentTeamMember].role}</p>
+                </div>
               </div>
-            ))}
+              <p className="text-muted-foreground">{teamMembers[currentTeamMember].bio}</p>
+            </div>
+            
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {teamMembers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTeamMember(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentTeamMember ? 'w-6 bg-lucent-500' : 'bg-lucent-200'
+                  }`}
+                  aria-label={`Go to team member ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
