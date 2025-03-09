@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: 'Emily Rodriguez',
     role: 'Founder, EcoSolutions',
-    quote: 'The team at Lucent Rivers understood our vision perfectly and brought it to life with exceptional creativity and technical skill. They're true partners in our success.',
+    quote: 'The team at Lucent Rivers understood our vision perfectly and brought it to life with exceptional creativity and technical skill. They\'re true partners in our success.',
     avatar: 'ER'
   },
   {
