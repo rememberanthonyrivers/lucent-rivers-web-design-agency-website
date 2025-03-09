@@ -15,8 +15,8 @@ const PricingPage = () => {
     {
       name: "Basic",
       description: "For small businesses starting their online journey",
-      monthlyPrice: 999,
-      annualPrice: 899 * 12, // 10% discount for annual
+      monthlyPrice: 499,
+      annualPrice: 399,
       features: [
         "Responsive website design",
         "5 pages included",
@@ -31,8 +31,8 @@ const PricingPage = () => {
     {
       name: "Professional",
       description: "For growing businesses needing more features",
-      monthlyPrice: 1999,
-      annualPrice: 1799 * 12, // 10% discount for annual
+      monthlyPrice: 999,
+      annualPrice: 799,
       features: [
         "Everything in Basic",
         "E-commerce functionality",
@@ -49,8 +49,8 @@ const PricingPage = () => {
     {
       name: "Enterprise",
       description: "For established businesses with custom requirements",
-      monthlyPrice: 3999,
-      annualPrice: 3599 * 12, // 10% discount for annual
+      monthlyPrice: 1999,
+      annualPrice: 1599,
       features: [
         "Everything in Professional",
         "Custom web application",
@@ -97,14 +97,14 @@ const PricingPage = () => {
                     : 'text-muted-foreground'
                 }`}
               >
-                Annually <span className="text-xs text-lucent-500 ml-1">Save 10%</span>
+                Annually <span className="text-xs text-lucent-500 ml-1">Save 20%</span>
               </button>
             </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {tiers.map((tier, index) => (
-              <div key={index} className={`relative ${tier.highlighted ? 'mt-[-20px] mb-[-20px]' : ''}`}>
+              <div key={index} className={`relative ${tier.highlighted ? 'mt-[-30px] mb-[-10px]' : ''}`}>
                 {tier.highlighted && (
                   <div className="absolute top-0 inset-x-0 transform -translate-y-1/2 flex justify-center">
                     <span className="bg-lucent-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
@@ -122,8 +122,8 @@ const PricingPage = () => {
                     <div className="mb-4">
                       <span className="text-4xl font-bold">
                         ${billingCycle === 'monthly' 
-                          ? tier.monthlyPrice.toLocaleString() 
-                          : (tier.annualPrice / 12).toLocaleString()}
+                          ? tier.monthlyPrice 
+                          : tier.annualPrice}
                       </span>
                       <span className="text-muted-foreground ml-2">
                         /{billingCycle === 'monthly' ? 'month' : 'month, billed annually'}

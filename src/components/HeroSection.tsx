@@ -68,16 +68,6 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="mt-12 flex items-center space-x-4">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div 
-                    key={i} 
-                    className="w-10 h-10 rounded-full bg-lucent-100 border-2 border-white flex items-center justify-center overflow-hidden"
-                  >
-                    <span className="text-xs font-medium text-lucent-800">{i}</span>
-                  </div>
-                ))}
-              </div>
               <p className="text-sm text-muted-foreground">
                 <span className="font-medium text-foreground">40+</span> projects completed with happy clients
               </p>
