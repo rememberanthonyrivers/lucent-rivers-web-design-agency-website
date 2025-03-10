@@ -83,7 +83,7 @@ const PricingPage = () => {
                 onClick={() => setBillingCycle('monthly')}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                   billingCycle === 'monthly' 
-                    ? 'bg-white shadow-sm text-foreground' 
+                    ? 'bg-white shadow-sm text-black' 
                     : 'text-muted-foreground'
                 }`}
               >
@@ -93,7 +93,7 @@ const PricingPage = () => {
                 onClick={() => setBillingCycle('annually')}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                   billingCycle === 'annually' 
-                    ? 'bg-white shadow-sm text-foreground' 
+                    ? 'bg-white shadow-sm text-black' 
                     : 'text-muted-foreground'
                 }`}
               >
@@ -104,9 +104,9 @@ const PricingPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {tiers.map((tier, index) => (
-              <div key={index} className={`relative ${tier.highlighted ? 'mt-[-30px] mb-[-10px]' : ''}`}>
+              <div key={index} className={`relative ${tier.highlighted ? 'mt-[-40px] mb-[-10px]' : ''}`}>
                 {tier.highlighted && (
-                  <div className="absolute top-0 inset-x-0 transform -translate-y-1/2 flex justify-center">
+                  <div className="absolute top-0 inset-x-0 transform -translate-y-full flex justify-center pb-2">
                     <span className="bg-lucent-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                       Most Popular
                     </span>
