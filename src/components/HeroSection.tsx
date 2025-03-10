@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 animate-fade-in-up">
             <div className="mb-6">
-              <span className="inline-block px-3 py-1 mb-4 text-xs font-medium rounded-full bg-lucent-50 text-lucent-600">
+              <span className="inline-block px-3 py-1 mb-4 text-xs font-medium rounded-full bg-lucent-50 text-lucent-600 dark:bg-lucent-900/50 dark:text-lucent-300">
                 Premium Web Development Agency
               </span>
               <h1 
@@ -59,10 +59,10 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="px-5 py-3 rounded-md bg-lucent-500 text-white font-medium hover:bg-lucent-600 transition-colors">
+              <Link to="/contact" className="px-5 py-3 rounded-md bg-lucent-500 text-white font-medium hover:bg-lucent-600 transition-colors dark:bg-lucent-600 dark:hover:bg-lucent-700">
                 Start Your Project
               </Link>
-              <Link to="/portfolio" className="px-5 py-3 rounded-md border border-lucent-200 hover:border-lucent-400 transition-colors">
+              <Link to="/portfolio" className="px-5 py-3 rounded-md border border-lucent-200 hover:border-lucent-400 transition-colors dark:border-lucent-700 dark:hover:border-lucent-500">
                 Our Portfolio
               </Link>
             </div>
@@ -76,18 +76,13 @@ const HeroSection: React.FC = () => {
           
           <div className="w-full md:w-1/2 animate-fade-in">
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-lucent-400 to-lucent-600 rounded-3xl blur opacity-30 animate-pulse-soft"></div>
-              <div className="relative bg-black/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 shadow-xl hover-lift">
-                <div className="h-96 p-6 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="absolute -inset-4 blur-xl bg-lucent-500/20 rounded-full animate-pulse-soft"></div>
-                    <div className="relative w-24 h-24 border-4 border-lucent-500/30 rounded-full flex items-center justify-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-lucent-400 to-lucent-600 rounded-full animate-float flex items-center justify-center">
-                        <span className="text-white text-xl font-bold">LR</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-lucent-400 to-lucent-600 rounded-3xl blur opacity-30 animate-pulse-soft dark:from-lucent-600 dark:to-lucent-800"></div>
+              <div className="relative bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 dark:border-white/10 shadow-xl hover-lift">
+                <img 
+                  src="/hero-image.jpg" 
+                  alt="Digital transformation" 
+                  className="w-full h-96 object-cover object-center"
+                />
               </div>
             </div>
           </div>
