@@ -63,7 +63,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email us at</p>
-                    <p className="font-medium">hello@lucentrivers.com</p>
+                    <p className="font-medium">hello.lrssoftwaresolutions@gmail.com</p>
                   </div>
                 </div>
                 
@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Call us at</p>
-                    <p className="font-medium">+1 (555) 123-4567</p>
+                    <p className="font-medium">+1 (908) 294-2646</p>
                   </div>
                 </div>
                 
@@ -83,13 +83,13 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Visit our office</p>
-                    <p className="font-medium">San Francisco, CA</p>
+                    <p className="font-medium">New York, NY</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-12">
-                <h4 className="text-sm font-medium mb-4">Follow us</h4>
+                {/* <h4 className="text-sm font-medium mb-4">Follow us</h4>
                 <div className="flex space-x-3">
                   {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
                     <a
@@ -100,7 +100,7 @@ const ContactSection: React.FC = () => {
                       <span className="capitalize text-xs text-lucent-600">{social[0].toUpperCase()}</span>
                     </a>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

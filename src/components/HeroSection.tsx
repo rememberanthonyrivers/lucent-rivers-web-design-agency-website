@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
             
             <div className="mt-12 flex items-center space-x-4">
               <p className="text-sm text-muted-foreground">
-                <span className="font-medium text-foreground">40+</span> projects completed with happy clients
+                <span className="font-medium text-foreground">100+</span> projects completed with happy clients
               </p>
             </div>
           </div>

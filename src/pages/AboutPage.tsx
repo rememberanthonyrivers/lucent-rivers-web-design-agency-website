@@ -5,10 +5,10 @@ import PageLayout from '@/components/PageLayout';
 
 const teamMembers = [
   {
-    name: "Alex Johnson",
+    name: "Anthony Rivers",
     role: "Founder & CEO",
-    bio: "With over 15 years of experience in web development and digital strategy, Alex founded Lucent Rivers to create transformative digital experiences.",
-    avatar: "AJ"
+    bio: "With over 8 years of experience in web development and digital strategy, Anthony founded Lucent Rivers to create transformative digital experiences.",
+    avatar: "AR"
   },
   {
     name: "Samantha Chen",

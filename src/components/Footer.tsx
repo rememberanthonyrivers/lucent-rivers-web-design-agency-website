@@ -55,12 +55,12 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="mailto:hello@lucentrivers.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  hello@lucentrivers.com
+                hello.lrssoftwaresolutions@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+15551234567" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  +1 (555) 123-4567
+                  +1 (908) 294-2646
                 </a>
               </li>
             </ul>
