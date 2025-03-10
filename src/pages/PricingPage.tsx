@@ -106,9 +106,6 @@ const PricingPage = () => {
               <div key={index} className={`relative ${tier.highlighted ? 'mt-[-40px] mb-[-10px]' : ''}`}>
                 {tier.highlighted && (
                   <div className="absolute top-0 inset-x-0 transform -translate-y-full flex justify-center">
-                    <span className="bg-lucent-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg my-4">
-                      Most Popular
-                    </span>
                   </div>
                 )}
                 
