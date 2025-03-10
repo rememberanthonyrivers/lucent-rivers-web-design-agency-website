@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-lucent-400 to-lucent-600 rounded-3xl blur opacity-30 animate-pulse-soft dark:from-lucent-600 dark:to-lucent-800"></div>
               <div className="relative bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 dark:border-white/10 shadow-xl hover-lift">
                 <img 
-                  src="/hero-image.jpg" 
+                  src="/startup-meeting-large.jpg" 
                   alt="Digital transformation" 
                   className="w-full h-96 object-cover object-center"
                 />
