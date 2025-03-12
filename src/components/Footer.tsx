@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="mailto:hello@lucentrivers.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                hello.lrssoftwaresolutions@gmail.com
+                hello.lrssolutions@gmail.com
                 </a>
               </li>
               <li>
