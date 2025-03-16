@@ -109,13 +109,13 @@ const PortfolioPage = () => {
                       ))}
                     </div>
                     
-                    <a 
+                    {/* <a 
                       href={project.link} 
                       className="inline-flex items-center text-lucent-500 hover:text-lucent-600 transition-colors group/link"
                     >
                       View Project 
                       <ExternalLink className="h-4 w-4 ml-2 transform transition-transform group-hover/link:translate-x-1" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
